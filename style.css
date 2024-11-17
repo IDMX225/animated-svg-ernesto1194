@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#body {
+    animation: bodyEnter 2s ease-out forwards, bodyAnimation 2s ease-in-out infinite alternate;
+    transform-origin: center center;
+    position: relative;
+}
+
+#wings {
+    animation: wingsAnimation 1.5s ease-in-out infinite alternate;
+    transform-origin: center center;
+}
+
+@keyframes bodyEnter {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bodyAnimation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(-10deg);
+    }
+}
+
+@keyframes wingsAnimation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(10deg);
+    }
+}
