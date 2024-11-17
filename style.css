@@ -11,7 +11,7 @@
 }
 
 #wings {
-    animation: wingsAnimation 1.5s ease-in-out infinite alternate;
+    animation: wingsSpin 3s linear infinite;
     transform-origin: center center;
 }
 
@@ -35,12 +35,12 @@
     }
 }
 
-@keyframes wingsAnimation {
+@keyframes wingsSpin {
     0% {
         transform: rotateZ(0deg);
     }
 
     100% {
-        transform: rotateZ(10deg);
+        transform: rotateZ(360deg);
     }
 }
