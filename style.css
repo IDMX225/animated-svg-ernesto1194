@@ -17,11 +17,14 @@ svg {
 #body {
     position: absolute;
     animation: upDown 3s ease-in-out infinite;
-    transform-origin: center center;
+    transform-origin: center;
 }
 
 @keyframes upDown {
-    0% {
+
+    0%,
+    50%,
+    100% {
         transform: translateY(0);
     }
 
@@ -29,14 +32,7 @@ svg {
         transform: translateY(-50px);
     }
 
-    50% {
-        transform: translateY(0);
-    }
-
     75% {
         transform: translateY(50px);
     }
-
-    100% {
-        transform: translateY(0);
-    }
+}
