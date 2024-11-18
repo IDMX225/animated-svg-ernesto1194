@@ -6,6 +6,7 @@
 
 body {
     overflow-x: hidden;
+    height: 100vh;
 }
 
 svg {
@@ -15,16 +16,27 @@ svg {
 
 #body {
     position: absolute;
-    animation: moveBody 9s linear infinite;
+    animation: upDown 3s ease-in-out infinite;
     transform-origin: center center;
 }
 
-@keyframes moveBody {
+@keyframes upDown {
     0% {
-        transform: translateX(-100%);
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-50px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(50px);
     }
 
     100% {
-        transform: translateX(100vw);
+        transform: translateY(0);
     }
-}
