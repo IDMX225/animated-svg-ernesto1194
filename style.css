@@ -4,43 +4,27 @@
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+svg {
+    display: block;
+    width: 100%;
+}
+
 #body {
-    animation: bodyEnter 2s ease-out forwards, bodyAnimation 2s ease-in-out infinite alternate;
-    transform-origin: center center;
-    position: relative;
-}
-
-#wings {
-    animation: wingsSpin 3s linear infinite;
+    position: absolute;
+    animation: moveBody 9s linear infinite;
     transform-origin: center center;
 }
 
-@keyframes bodyEnter {
+@keyframes moveBody {
     0% {
         transform: translateX(-100%);
     }
 
     100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes bodyAnimation {
-    0% {
-        transform: rotateZ(0deg);
-    }
-
-    100% {
-        transform: rotateZ(-10deg);
-    }
-}
-
-@keyframes wingsSpin {
-    0% {
-        transform: rotateZ(0deg);
-    }
-
-    100% {
-        transform: rotateZ(180deg);
+        transform: translateX(100vw);
     }
 }
